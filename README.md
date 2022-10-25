@@ -1,4 +1,7 @@
 # Intro til webutvikling
+Velkommen til workshop om webutvikling!👋👋 Her vil vi ta deg gjennom 6 steg for å få opprettet en webapplikasjon og gjøre den tilgjengelig på nett 🌐
+
+Sitter du fast med noe, har spørsmål eller bare vil slå av en prat? Huk tak i en bekker, så ser vi på det sammen! 😊  
 
 ## Programvare
 
@@ -31,6 +34,12 @@ For installasjon av Node og NPM, anbefaler vi å bruke verktøyet [Node Version 
    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
    ```
    Man bør alltid være litt kritisk når man får beskjed om å _"bare kjøre denne linja i terminalen"_ på nett, men her har vi altså kun trukket med kommandoen som står beskrevet i `nvm` sin dokumentasjon. [Ta gjerne en nøyere titt på den her.](https://github.com/nvm-sh/nvm#installing-and-updating)
+
+   <details>
+    <summary>Bruker du Windows?💻</summary>
+
+    den orginale nvm er ikke tilgjengelig på Windows. Du kan alltids forsøke å bruke [et alternativ](https://github.com/coreybutler/nvm-windows#installation--upgrades). Ellers kan du bare installere node uten nvm, direkte fra [NodeJS.org](https://nodejs.org/en/).
+   </details>
 2. Last ned og installer nyeste versjon av `node` og `npm` med:
    ```bash
    nvm install node
@@ -74,7 +83,7 @@ npm install --global npx
 
 Det finnes flere måter å komme i gang med et React-prosjekt. En enkel måte er å bruke [Create React App](https://create-react-app.dev/docs/getting-started/) som hjelper deg med å sette opp det man trenger for å komme i gang.
 
-Naviger til stedet du vil opprette prosjektet og skriv følgende kommando i terminalen for å opprette prosjektet:
+Naviger til stedet du vil opprette prosjektet og skriv følgende kommando i terminalen for å opprette prosjektet: 
 
 ```
 npx create-react-app <navn på applikasjon>
@@ -167,29 +176,37 @@ export default App;
    git commit -m "<endringsmelding>"
    ```
 4. Deretter kan du pushe koden til GitHub:
-   `git push -u origin master`
+`git push -u origin master` 
 
 <details>
 <summary>Ikke så komfortabel i kommandolinjen? ☝</summary>
-Man kan også laste opp applikasjonsfilene til GitHub direkte i GitHub sitt grensesnitt. Gå til www.github.com/DittBrukernavn/DittRepository/upload. 
+Man kan også laste opp applikasjonsfilene til GitHub direkte i GitHub sitt grensesnitt. Gå til www.github.com/DittBrukernavn/DittRepository/upload.
+
+
+Man kan også bruke [GitHub Desktop](https://desktop.github.com/), som tilbyr et grafisk grensesnitt for å jobbe med Git.
 </details>
 
-### Steg 5: Registrer bruker hos Vercel
-
+### Steg 5: Registrer bruker hos Vercel 
 For å gjøre applikasjonen din tilgjengelig for andre enn deg selv, må vi legge den et sted hvor flere kan nå den. Det finnes mange måter å gjøre dette på, den enkleste er kanskje å benytte seg av en skyplattform slik som vi skal gjøre i dag.
 
-Denne gangen vil vi bruke [Vercel](https://vercel.com/signup) for hosting av applikasjonen vår.
+Denne gangen vil vi bruke [Vercel](https://vercel.com/signup) for hosting av applikasjonen vår. 
 
-Gå til [https://vercel.com/signup](https://vercel.com/signup) og registrer deg med GitHub-brukeren din.
+Gå til https://vercel.com/signup og registrer deg med GitHub-brukeren din.
 
-(_andre gode alternativer for enkel hosting kan være Heroku, Google Firebase, og Netlify_)
 
-### Steg 6: Opprett prosjekt i Vercel
+(_andre gode alternativer for hosting kan være Heroku, Google Firebase, og Netlify_)
 
-Nå nærmer vi oss en applikasjon på nett! 🤩 Vi må bare få koblet opp GitHub-repoet til Vercel, slik at vi kan få koden vår på en web-server.
+### Steg 6: Deploy applikasjonen til Vercel
+Nå nærmer vi oss en applikasjon på nett! 🤩 Vi må bare få koblet opp GitHub-repoet til Vercel, slik at vi kan få koden vår på en web-server. 
 
 1. Gå til https://vercel.com/new
 2. Velg "Continue with GitHub"
 3. Velg GitHub-repoet du lagde tidligere i steg 4.
-4. Under "Configure project" trykker deploy, uten å endre noen konfigurasjonsverdier.
-5. 🚀🚀🚀🚀🚀🚀
+4. Under "Configure project", trykk <button style="background-color:green; color: white; border-radius: 5px">Deploy</button> uten å endre noen konfigurasjonsverdier.
+5. Applikasjonen din er på nett! 🥳🥳🥳🥳 
+
+### Steg 7: Videreutvikling av applikasjonen
+
+Nå som du har en MVP av nettsiden din oppe å kjører, er det på tide å utvikle noen nye features på ekte smidig vis 😎 
+
+Hver gang du pusher endringer til main i GitHub-repoet ditt, vil Vercel plukke opp kodeendringen og lage en ny deployment 🚀
